@@ -1,0 +1,16 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="profile.css">
+        <title>プロフィール</title>
+    </head>
+    <body>
+        <h1>プロフィール</h1>
+        <table>
+            <tr><th><img src="icon3.png"></th><th><img src="icon4.png"></th></tr>
+            <tr class="t_d"><td class="pori">ポリテクセンター北海道<br>ものづくりプログラム科12月生</td><td class="pori">製造(建築道具)<br>製造(ジュエリ―)</td></tr>
+            <tr><th><img src="icon6.png"></th><th><img src="icon5.png"></th></tr>
+            <tr class="t_d"><td>html/css<br>C<br>Java<br>PHP<br>MySQL<br>Android<br>他<br>OS:Windows10</td><td>ライブ・フェスに行く(邦ロック)<br>ゲーム</td></tr>
+        </table>
+    </body>
+</html>

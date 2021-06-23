@@ -1,0 +1,48 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    height: 100%;
+    width: 90%;
+    max-width: 800px;
+    font-family: "游ゴシック", "Yu Gothic UI","メイリオ";
+    background-color: #737373;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 50px;
+}
+#logo{
+    opacity: 0;
+    transition: 1s;
+    text-align: center;
+    pointer-events: none;
+    margin-top: 15%;
+}
+
+#logo img{
+    height: 50%;
+    width: 50%;
+}
+
+#icon{
+    opacity: 0;
+    transition: 1s;
+    text-align: center;
+    display: inline-block;
+    height: 30%;
+    width: 100%;
+    margin-top: 10%;
+}
+
+#btn1,#btn2{
+    height: 20%;
+    width: 20%;
+    border-radius: 100%;
+    cursor: pointer; 
+}
+
+#btn1{
+    margin-right: 50px;
+}
+

@@ -1,0 +1,43 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="portfolio.css">
+        <script type="text/javascript">
+        window.onload = function(){
+            const logo = document.getElementById("logo");
+            const icon = document.getElementById("icon");
+
+            logo.style="opacity: 1";
+            icon.style="opacity: 1";
+
+            const btn1 = document.getElementById("btn1");
+            const btn2 = document.getElementById("btn2");
+
+            btn1.addEventListener('mouseover', () =>{
+                btn1.setAttribute('src','portfolioicon/icon1focus.png');
+            }, false);
+
+            btn1.addEventListener('mouseleave',() =>{
+                btn1.setAttribute('src','portfolioicon/icon1.png');
+            }, false);
+
+            btn2.addEventListener('mouseover', () =>{
+                btn2.setAttribute('src','portfolioicon/icon2focus.png');
+            }, false);
+
+            btn2.addEventListener('mouseleave',() =>{
+                btn2.setAttribute('src','portfolioicon/icon2.png');
+            }, false);
+        }
+        </script>
+        <title>ポートフォリオ</title>
+    </head>
+    <body>
+        <div id="logo"><img src="portfolioicon/logo.png"></div>
+        <div id="icon">
+            <img id="btn1" src="portfolioicon/icon1.png" onclick="location.href='profile.html'">
+            <img id="btn2" src="portfolioicon/icon2.png" onclick="location.href='creation.html'">
+        </div>
+    </body>
+</html>

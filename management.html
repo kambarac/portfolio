@@ -1,0 +1,118 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="management.css">
+        <script type="text/javascript">
+        function info_click(){
+            var radio = document.getElementsByName("label_btn");
+            for(var i = 0; i < radio.length; i++){
+                var label = "body" + i;
+                if(radio[i].checked){
+                    var click = document.getElementById(label);
+                    click.style="display: block";
+                    continue;
+                }
+                var visible = document.getElementById(label);
+                visible.style = "display: none";
+            }
+        }
+        </script>
+        <title>管理システム</title>
+    </head>
+    <body>
+        <header>
+            <ul>
+                <li><a href="portfolio.html">TOP</a></li>
+                <li><a href="profile.html">プロフィール</a></li>
+                <li><a htrf="creation.html">制作物</a></li>
+            </ul>
+        </header>
+        <div id="titlelogo"><img src="creationicon/logo1.png"></div>
+        <ul id="bodymenu">
+            <li><label for="label0">概要</label><input type="radio" name="label_btn" id="label0" checked onclick="info_click()"></li><li><label for="label1">ログイン画面</label><input type="radio" name="label_btn" id="label1" onclick="info_click()"></li><li><label for="label2">新規ユーザー登録</label><input type="radio" name="label_btn" id="label2"  onclick="info_click()"></li><li><label for="label3">ユーザー画面</label><input type="radio" name="label_btn" id="label3" onclick="info_click()"></li><li><label for="label4">登録・変更画面</label><input type="radio" name="label_btn" id="label4" onclick="info_click()"></li><li><label for="label5">メニュー画面</label><input type="radio" name="label_btn" id="label5" onclick="info_click()"></li>
+        </ul>
+        <div id="body0" style="display: block;">
+            <div class="titlelogo"><img src="creationicon/title0.png"></div>
+            <h2>開発環境</h2>
+            <p>[OS]<br>Windows 10<br><br>[開発ツール]<br>Eclipse 2019/Java version.11 (openJDK)<br><br>[Webサーバ]<br>Apache Tomcat/9.0.30<br><br>[DB]<br>PostgreSQL10</p>
+            <h2>課題</h2>
+            <p>JSP及びServletを経由しデータベースを使用した情報を管理するシステムを作る</p>
+            <h2>作成物の説明</h2>
+            <p>自分の持っている服を管理するシステム<br>データの初期表示をショッピングサイトのようにする<br><br>テーブル設定</p>
+            <div><img src="tableteigisho"></div>
+            <p>画面外機能<br>セッションでユーザー情報を保持する<br></p>
+        </div>
+        <div id="body1" style="display: none;">
+            <div class="titlelogo"><img src="creationicon/title1.png"></div>
+            <table>
+                <tr><td colspan="2"><ユーザーログイン画面><br>■ログインボタン■<br>データベースに登録されたユーザーIDとパスワードをチェックする。<br>→確認後ユーザーページへ遷移<br><br><条件><br>半角英数字、未入力不可<br><br>OK→ユーザーページへ遷移<br>NG→エラーアラートが表示される<br><br><br>■新規ユーザー登録ボタン■<br>新規ユーザー登録ページへ遷移</td></tr>
+                <tr id="padding"><th colspan="2"><img src="img/login.png" width="80%"></th></tr>
+                <tr><th colspan="2">エラー時アラート表示</th></tr>
+                <tr><td><img src="img/login_error01.png"></td><td><img src="img/login_error03.png"></td></tr>
+                <tr><th colspan="2">アラート確認後画面</th></tr>
+                <tr><td><img src="img/login_error02.png"></td><td><img src="img/login_error04.png"></td></tr>
+            </table>
+        </div>
+        <div id="body2" style="display: none;">
+            <div class="titlelogo"><img src="creationicon/title2.png"></div>
+            <table>
+                <tr><td colspan="2"><ユーザー新規登録画面><br>■登録ボタン■<br>ログイン同様入力チェックを行い登録する。<br>登録確認ダイアログでOKボタンを選択<br>→データベースに入力情報が登録されユーザーページへ遷移。<br><br><条件><br>ユーザーIDを一意に設定しているので既存のIDとの重複ができない<br>ユーザーID、パスワードは半角英数字のみ対応<br>全項目未入力不可</td></tr>
+                <tr id="padding"><th colspan="2"><img src="img/user_entry.png" width="80%"></th></tr>
+                <tr><th colspan="2">エラーアラート確認後画面</th></tr>
+                <tr><td><img src="img/user_entry_error02.png"></td><td><img src="img/user_entry_error04.png"></td></tr>
+                <tr><th colspan="2">登録確認ダイアログ</th></tr>
+                <tr><td><img src="img/user_entry_normally.png"></td><td class="textleft">データベース上にある既存ユーザーIDの重複確認後、ダイアログが表示される。<br>キャンセル選択時「キャンセルしました」アラート表示。</td></tr>
+            </table>
+        </div>
+        <div id="body3" style="display: none;">
+            <div class="titlelogo"><img src="creationicon/title3.png"></div>
+            <table>
+                <tr><td colspan="2"><ユーザー画面><br>ユーザーごとに登録されたデータを全件取得し表示する。<br><br>■検索を開くボタン■<br>検索フォームを表示する。<br>検索項目入力後□検索ボタン□選択<br>→データベースより検索後結果を表示する。
+                    <br><br>■ページング用ボタン■<br>現在のページ数を青く表示(クリック不可)。<br>□数字ボタン□　そのページの最大12件分の情報を表示する。<br>□次(前)ボタン□　一つ前(後)の最大12件分の情報を表示する。
+                    <br><br>■各種機能ボタン■<br>□変更ボタン□<br>ラジオボタン選択データを取得し変更画面へ遷移する。<br><br>□削除ボタン□<br>ラジオボタン選択データを削除する。<br>確認ダイアログでOKボタンを選択<br>→選択データ削除後の全データが再表示される。<br><br>□追加ボタン□<br>データ登録画面へ遷移する。</td></tr>
+                <tr id="padding"><th colspan="2"><img src="img/userpage02.png" width="80%"></th></tr>
+                <tr><th>データ未登録時・検索結果不一致時</th><th>ラジオボタン選択時</th></tr>
+                <tr><td><img src="img/userpage01.png"></td><td><img src="img/userpage_after_selectGear.png"></td></tr>
+                <tr><th colspan="2">検索フォーム</th></tr>
+                <tr><td><img src="img/userpage_searchOpen.png"></td><td class="textleft">[検索機能]<br>あいまい検索<br>複数条件かの検索可能<br><br>□検索ボタン□<br>入力項目に一致するデータを表示する。<br><br>□全件ボタン□<br>登録データを全件表示する。</td></tr>
+                <tr><th>検索項目(色検索「黒」)</th><th>検索結果</th></tr>
+                <tr><td><img src="img/userpage_search_noemallty.png"></td><td class="textleft"><img src="img/userpage_search_noemallty_before.png"></td></tr>
+                <tr><th colspan="2">変更ボタン・削除ボタンエラー</th></tr>
+                <tr><td><img src="img/userpage_change_delete_error.png"></td><td class="textleft">ラジオボタン未選択時<br>□変更ボタン・削除ボタン□選択<br>アラート表示。</td></tr>
+                <tr><th colspan="2">削除確認ダイアログ</th></tr>
+                <tr><td><img src="img/userpage_delete.png"></td><td class="textleft">ラジオボタン選択時□削除ボタン□を選択。<br>選択データの詳細を確認<br>OK選択時データ削除を行い「削除しました」アラート表示。<br>キャンセル選択時「キャンセルしました」アラート表示。</td></tr>
+            </table>
+        </div>
+        <div id="body4" style="display: none;">
+            <div class="titlelogo"><img src="creationicon/title4.png"></div>
+            <table>
+                <tr><td colspan="2"><登録画面><br>各項目に入力された情報をデータベースに登録する。<br>■追加ボタン■<br>入力チェックを行い登録する。<br><br><条件><br>必須項目がすべて入力されている。<br><br>OK→登録後入力項目がリセットした状態で登録画面が表示される。<br>NG→エラーのアラートが表示され再入力を求める。<br><br>■topボタン■<br>ユーザーページに遷移する。</td></tr>
+                <tr id="padding"><th colspan="2"><img src="img/add_gear.png" width="80%"></th></tr>
+                <tr><th colspan="2">エラー時</th></tr>
+                <tr><td><img src="img/add_gear_error01.png"></td><td><img src="img/add_gear_error02.png"></td></tr>
+                <tr><th colspan="2">確認後ダイアログ</th></tr>
+                <tr><td><img src="img/add_gear_normally.png"></td><td class="textleft">確認ダイアログ<br>OK選択時データベースに登録される。<br>キャンセル選択時「キャンセルしました」アラート表示。</td></tr>
+                <tr><td colspan="2"><変更画面><br>ユーザー画面で選択した既存情報が入力フォームに入力されている。<br>データベースの既存データを各項目に入力された情報に変更(再登録)する。<br>エラー時の挙動は登録と同じ。<br>■変更ボタン■<br>入力チェックを行い変更する。<br><br><条件><br>登録と同じ。<br><br>■topボタン■<br>ユーザーページに遷移する。</td></tr>
+                <tr id="padding"><th colspan="2"><img src="img/change_gear.png" width="80%"></th></tr>
+                <tr><th colspan="2">確認ダイアログ</th></tr>
+                <tr><td><img src="img/change_gear_normally.png"></td><td class="textleft">確認ダイアログ<br><br>OK選択時既存データが変更される。<br>→ユーザー画面へ遷移。<br>キャンセル選択時「キャンセルしました」アラート表示。</td></tr>
+            </table>
+        </div>
+        <div id="body5" style="display: none;">
+            <div class="titlelogo"><img src="creationicon/title5.png"></div>
+            <table>
+                <tr><td colspan="2"><メニュー画面><br>ログイン後すべてのページで表示。<br>ユーザー情報と各項目の表示。<br>■ユーザー情報変更■<br>ユーザーデータ変更画面へ遷移。<br><br>■クロゼット情報■<br>ダイアログ表示<br>OK選択時現在登録されているデータの詳細確認画面へ遷移。<br><br>■ログアウト■<br>現在のセッションを破棄しログイン画面へ遷移。<br>キャンセル選択時「キャンセルしました」アラート表示。</td></tr>
+                <tr id="padding"><th colspan="2"><img src="img/menu.png" width="80%"></th></tr>
+                <tr><th colspan="2">ユーザー情報変更画面</th></tr>
+                <tr><th colspan="2"><img src="img/user_info_change.png" width="80%"></th></tr>
+                <tr><td><img src="img/user_info_change_normally.png"></td><td class="textleft">パスワード以外の既存ユーザーデータを項目に表示。<br>入力データのみ変更を行う。<br><br>■変更ボタン■<br>入力チェックはユーザー新規登録画面と同じ。<br>確認ダイアログ<br>OK選択時ユーザー情報が変更されユーザー画面へ遷移。<br>キャンセル選択時「キャンセルしました」アラート表示。</td></tr>
+                <tr><td><img src="img/user_delete.png"></td><td class="textleft">■ユーザー削除ボタン■<br>確認ダイアログ<br>OK選択時データベースからユーザー情報が削除されログイン画面へ遷移。<br>キャンセル選択時「キャンセルしました」アラート表示。</td></tr>
+                <tr><th colspan="2">クロゼット情報</th></tr>
+                <tr><th colspan="2"><img src="img/closet_info.png" width="80%"></th></tr>
+                <tr><td><img src="img/closet_info_open01.png"></td><td class="textleft">現在登録されているデータ数<br>各項目ごとの最大数が表示される。<br><br>■詳しく見るボタン■<br>各項目の詳細登録データ数を表示する(非表示を切り替える)。</td></tr>
+                <tr><td><img src="img/csv_dialog.png"></td><td class="textleft">■CSV出力ボタン■<br>Cドライブ下に「csv」フォルダを作り登録データをcsvファイルで書き出す。<br><br>確認ダイアログ<br>OK選択時書き出しを開始する。<br>キャンセル選択時「キャンセルしました」アラート表示。<br><br>書き出し成功「正常に書き込まれました」<br>書き出し失敗「書き込み中にエラーが発生しました」<br>アラート表示。</td></tr>
+                <tr><td><img src="img/closet_delete_dialog.png"></td><td class="textleft">■データをすべて削除ボタン■<br>データベースに登録されている情報をすべて削除する。<br><br>確認ダイアログ<br>OK選択時データが削除される。<br>キャンセル選択時「キャンセルしました」アラート表示。</nr></td></tr>
+            </table>
+        </div>
+    </body>
+</html>

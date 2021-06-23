@@ -1,0 +1,50 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="creation.css">
+        <script type="text/javascript">
+            window.onload = function(){
+                const logo = document.getElementById("logo");
+                const icon = document.getElementById("icon");
+    
+                logo.style="opacity: 1";
+                icon.style="opacity: 1";
+    
+                const btn1 = document.getElementById("btn1");
+                const btn2 = document.getElementById("btn2");
+                const btn3 = document.getElementById("btn3");
+    
+                btn1.addEventListener('mouseover', () =>{
+                    btn1.setAttribute('src','creationicon/icon1focus.png');
+                }, false);
+    
+                btn1.addEventListener('mouseleave',() =>{
+                    btn1.setAttribute('src','creationicon/icon1.png');
+                }, false);
+    
+                btn2.addEventListener('mouseover', () =>{
+                    btn2.setAttribute('src','creationicon/icon2focus.png');
+                }, false);
+    
+                btn2.addEventListener('mouseleave',() =>{
+                    btn2.setAttribute('src','creationicon/icon2.png');
+                }, false);
+
+                btn3.addEventListener('mouseover', () =>{
+                    btn3.setAttribute('src','creationicon/icon3focus.png');
+                }, false);
+    
+                btn3.addEventListener('mouseleave',() =>{
+                    btn3.setAttribute('src','creationicon/icon3.png');
+                }, false);
+            }
+            </script>
+        <title>作成物</title>
+    </head>
+    <body>
+        <div id="all">
+            <div id="logo"><img src="creationicon/logo.png"></div>
+            <div id="icon"><img id="btn1" src="creationicon/icon1.png" onclick="location.href='management.html'"><img id="btn2" src="creationicon/icon2.png" onclick="location.href='#'"><img id="btn3" src="creationicon/icon3.png" onclick="location.href='#'"></div>
+        </div>
+    </body>
+</html>

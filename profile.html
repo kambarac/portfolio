@@ -1,0 +1,34 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="profile.css">
+        <script>
+            window.onload=function(){
+                const title = document.getElementById("titlelogo");
+                const e_th = document.getElementsByTagName("th");
+                const e_td = document.getElementsByTagName("td");
+
+                title.style="opacity: 1;";
+                for(var i = 0; i < e_th.length; i++){
+                    e_th[i].style="opacity: 1;";
+                }
+                for(var i = 0; i < e_th.length; i++){
+                    e_td[i].style="opacity: 1;";
+                }
+            }
+        </script>
+        <title>プロフィール</title>
+    </head>
+    <body>
+        <div id="bgi">
+        <div id="titlelogo"><img src="profileicon/profilelogo.png"></div>
+        <table>
+            <tr><th><img src="profileicon/icon3.png"></th><th><img src="profileicon/icon4.png"></th></tr>
+            <tr class="t_d"><td>ポリテクセンター北海道<br>ものづくりプログラム科12月生</td><td>製造(建築道具)<br>製造(ジュエリ―)</td></tr>
+	    <tr><t</tr>
+            <tr><th><img src="profileicon/icon6.png"></th><th><img src="profileicon/icon5.png"></th></tr>
+            <tr class="t_d"><td>html/css<br>C<br>Java<br>PHP<br>MySQL<br>Android<br>他<br>OS:Windows10</td><td>ライブ・フェスに行く(邦ロック)<br>ゲーム</td></tr>
+        </table>
+    </div>
+    </body>
+</html>
