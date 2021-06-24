@@ -1,0 +1,59 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="numeron.css">
+        <link rel="stylesheet" href="menu.css">        
+        <script type="text/javascript">
+            window.onload=function(){
+                const creation = document.getElementById("li_creation");
+                const menu_creation = document.getElementById("menu_creation");
+
+                creation.addEventListener('mouseenter', () => {
+                    creation.style="background-color: #a49292;border-color: #a49292;";
+                }, false);
+                creation.addEventListener('mouseleave', () => {
+                    creation.style="background-color: #7d6363;border-bottom: solid 4px #371f1f;";
+                }, false);
+                menu_creation.addEventListener('mouseenter', () => {
+                    creation.style="background-color: #a49292;border-color: #a49292;";
+                }, false);
+                menu_creation.addEventListener('mouseleave', () => {
+                    creation.style="background-color: #7d6363;border-bottom: solid 4px #371f1f;";
+                }, false)
+            }
+        </script>
+        <title>ぬめろん</title>
+    </head>
+    <body>
+        <header>
+            <ul>
+                <li id="header_title"><img src="creationicon/header.png"></li><li class="list"><span onclick="location='index.html'">TOP</span></li><li class="list"><span onclick="location='profile.html'">プロフィール</span></li><li><span  id="li_creation" onclick="location='creation.html'">制作物</span>
+                    <div id="menu_creation">
+                        <span onclick="location='management.html'">管理システム</span>
+                        <span onclick="location='numeron.html'">ぬめろん</span>
+                        <span onclick="location='yubisuma.html'">指スマ</span>
+                    </div>
+                </li>
+            </ul>
+        </header>
+        <div id="all">
+            <div class="titlelogo"><img src="creationicon/title9.png"></div>
+            <div class="titlelogo"><img src="creationicon/title0.png"></div>
+            <p>コード</p>
+            <a href="https://github.com/kambarac/numeron/blob/master/numeron.java" target="_blank" rel="noopener noreferrer">コード(Java)</a>
+            <h2>開発環境</h2>
+            <p>[OS]<br>Windows 10<br><br>[開発ツール]<br>Eclipse 2019/Java version.11 (openJDK)</p>        
+            <h2>きっかけ</h2>
+            <p>学習した内容を使って何か作りたかったパート2</p>
+            <div class="titlelogo"><img src="creationicon/title8.png"></div>
+            <p>普通の指スマ(いっせーので)のルールと同じ<br><br>「指スマ？」で口に出す数字を指定し、「上げる指」で自分があげる指の数を選ぶ。<br>コンピューターのターンでは上げる指のみ選ぶ。<br><br>[機能]<br>PL<br>ゲーム開始の全プレイヤーの合計指数より多く数字を指定したとき<br>(実際に人間がやるときの数字指定の間違いの可能性を加味して最大数の更新は行わない)<br>自分の持ち指以上の数を上げる指で選択したとき<br>→間違いを知らせて再入力を求める。<br><br>CP<br>現在のターンの全プレイヤーの最大数以上の数は指定しない。<br>「0」を指定するときに指を上げない。<br>自分の指を上げないと指定の数に到達しないときに指を上げる。</p>
+            <div class="titlelogo"><img src="creationicon/title7.png"></div>
+            <p>(you'v') : player<br>( 'v')<(@2)2(4!) : ( 'v')<(@自分の持ち指)上げた指(指定した数字！)</p>
+            <img src="img/yubisuma1.png" width="80%">
+            <p>エラー(ゲーム開始の最大数以上指定)</p>
+            <img src="img/yubisuma2.png" width="80%">
+            <p>エラー(自分の持ち指以上選択)</p>
+            <img src="img/yubisuma3.png" width="80%">
+        </div>
+    </body>
+</html>

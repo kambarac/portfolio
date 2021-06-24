@@ -2,29 +2,51 @@
 <html>
     <head>
         <link rel="stylesheet" href="management.css">
+        <link rel="stylesheet" href="menu.css">        
         <script type="text/javascript">
-        function info_click(){
-            var radio = document.getElementsByName("label_btn");
-            for(var i = 0; i < radio.length; i++){
-                var label = "body" + i;
-                if(radio[i].checked){
-                    var click = document.getElementById(label);
-                    click.style="display: block";
-                    continue;
-                }
-                var visible = document.getElementById(label);
-                visible.style = "display: none";
+            window.onload=function(){
+                const creation = document.getElementById("li_creation");
+                const menu_creation = document.getElementById("menu_creation");
+
+                creation.addEventListener('mouseenter', () => {
+                    creation.style="background-color: #a49292;border-color: #a49292;";
+                }, false);
+                creation.addEventListener('mouseleave', () => {
+                    creation.style="background-color: #7d6363;border-bottom: solid 4px #371f1f;";
+                }, false);
+                menu_creation.addEventListener('mouseenter', () => {
+                    creation.style="background-color: #a49292;border-color: #a49292;";
+                }, false);
+                menu_creation.addEventListener('mouseleave', () => {
+                    creation.style="background-color: #7d6363;border-bottom: solid 4px #371f1f;";
+                }, false)
             }
-        }
+            function info_click(){
+                var radio = document.getElementsByName("label_btn");
+                for(var i = 0; i < radio.length; i++){
+                    var label = "body" + i;
+                    if(radio[i].checked){
+                        var click = document.getElementById(label);
+                        click.style="display: block";
+                        continue;
+                    }
+                    var visible = document.getElementById(label);
+                    visible.style = "display: none";
+                }
+            }
         </script>
         <title>管理システム</title>
     </head>
     <body>
         <header>
             <ul>
-                <li><a href="portfolio.html">TOP</a></li>
-                <li><a href="profile.html">プロフィール</a></li>
-                <li><a htrf="creation.html">制作物</a></li>
+                <li id="header_title"><img src="creationicon/header.png"></li><li class="list"><span onclick="location='index.html'">TOP</span></li><li class="list"><span onclick="location='profile.html'">プロフィール</span></li><li><span  id="li_creation" onclick="location='creation.html'">制作物</span>
+                    <div id="menu_creation">
+                        <span onclick="location='management.html'">管理システム</span>
+                        <span onclick="location='numeron.html'">ぬめろん</span>
+                        <span onclick="location='yubisuma.html'">指スマ</span>
+                    </div>
+                </li>
             </ul>
         </header>
         <div id="titlelogo"><img src="creationicon/logo1.png"></div>
@@ -33,13 +55,16 @@
         </ul>
         <div id="body0" style="display: block;">
             <div class="titlelogo"><img src="creationicon/title0.png"></div>
+            <p>コード</p>
+            <a href="https://github.com/kambarac/ClosetManagement/tree/master/WebContent" target="_blank" rel="noopener noreferrer">ガワ(JSP)のコード</a>
+            <a href="https://github.com/kambarac/ClosetManagement/tree/master/src" target="_blank" rel="noopener noreferrer">内部処理(Java)のコード</a>
             <h2>開発環境</h2>
             <p>[OS]<br>Windows 10<br><br>[開発ツール]<br>Eclipse 2019/Java version.11 (openJDK)<br><br>[Webサーバ]<br>Apache Tomcat/9.0.30<br><br>[DB]<br>PostgreSQL10</p>
             <h2>課題</h2>
-            <p>JSP及びServletを経由しデータベースを使用した情報を管理するシステムを作る</p>
+            <p>[開発期間]３週間<br>JSP及びServletを経由しデータベースを使用した情報を管理するシステムを作る</p>
             <h2>作成物の説明</h2>
-            <p>自分の持っている服を管理するシステム<br>データの初期表示をショッピングサイトのようにする<br><br>テーブル設定</p>
-            <div><img src="tableteigisho"></div>
+            <p>自分の持っている服を管理するシステム<br>データの表示をショッピングサイトのようにする</p>
+            <p>テーブル設定<br><img src="img/table.png" width="80%"></p>
             <p>画面外機能<br>セッションでユーザー情報を保持する<br></p>
         </div>
         <div id="body1" style="display: none;">

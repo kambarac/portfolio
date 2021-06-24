@@ -16,6 +16,7 @@ body{
 }
 
 #titlelogo{
+    margin-top: 40px;
     text-align: center;
 }
 
@@ -68,6 +69,7 @@ input[type=radio]{
 #body0{
     margin-left: auto;
 	margin-right: auto;
+    padding-bottom: 50px;
     height: auto;
     font-family: "游ゴシック", "Yu Gothic UI","メイリオ";
     color: #fff;
@@ -78,12 +80,12 @@ input[type=radio]{
     font-family: "游ゴシック", "Yu Gothic UI","メイリオ";
     font-weight: bold;
     font-size: 25px;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
+    margin-top: 20px;
 }
 
 #body0 p{
     font-family: "游ゴシック", "Yu Gothic UI","メイリオ";
-    margin-bottom: 50px;
 }
 
 table{
@@ -115,4 +117,11 @@ td img{
 
 .textleft{
     text-align: left;
+}
+
+a{
+    color: white;
+}
+a:hover{
+    color: #7d6363;
 }

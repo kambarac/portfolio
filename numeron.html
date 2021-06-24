@@ -1,22 +1,10 @@
 ﻿<!DOCTYPE html>
 <html>
     <head>
-        <link rel="stylesheet" href="profile.css">
-        <link rel="stylesheet" href="menu.css">
-        <script>
+        <link rel="stylesheet" href="numeron.css">
+        <link rel="stylesheet" href="menu.css">        
+        <script type="text/javascript">
             window.onload=function(){
-                const title = document.getElementById("titlelogo");
-                const e_th = document.getElementsByTagName("th");
-                const e_td = document.getElementsByTagName("td");
-
-                title.style="opacity: 1;";
-                for(var i = 0; i < e_th.length; i++){
-                    e_th[i].style="opacity: 1;";
-                }
-                for(var i = 0; i < e_th.length; i++){
-                    e_td[i].style="opacity: 1;";
-                }
-
                 const creation = document.getElementById("li_creation");
                 const menu_creation = document.getElementById("menu_creation");
 
@@ -34,7 +22,7 @@
                 }, false)
             }
         </script>
-        <title>プロフィール</title>
+        <title>ぬめろん</title>
     </head>
     <body>
         <header>
@@ -48,15 +36,21 @@
                 </li>
             </ul>
         </header>
-        <div id="bgi">
-            <div id="titlelogo"><img src="profileicon/profilelogo.png"></div>
-            <table>
-                <tr><th><img src="profileicon/icon3.png"></th><th><img src="profileicon/icon4.png"></th></tr>
-                <tr class="t_d"><td>ポリテクセンター北海道<br>ものづくりプログラム科12月生</td><td>製造(建築道具)<br>製造(ジュエリ―)</td></tr>
-            <tr><t</tr>
-                <tr><th><img src="profileicon/icon6.png"></th><th><img src="profileicon/icon5.png"></th></tr>
-                <tr class="t_d"><td>html/css(3日間)<br>PLC(2週間)<br>C(3週間)<br>Java(1ヶ月)<br>PHP・MySQL(2週間)<br>Android(1ヶ月)<br>他<br>OS:Windows10</td><td>ライブ・フェスに行く(邦ロック)<br>ゲーム</td></tr>
-            </table>
+        <div id="all">
+            <div class="titlelogo"><img src="creationicon/title6.png"></div>
+            <div class="titlelogo"><img src="creationicon/title0.png"></div>
+            <p>コード</p>
+            <a href="https://github.com/kambarac/numeron/blob/master/numeron.java" target="_blank" rel="noopener noreferrer">コード(Java)</a>
+            <h2>開発環境</h2>
+            <p>[OS]<br>Windows 10<br><br>[開発ツール]<br>Eclipse 2019/Java version.11 (openJDK)</p>        
+            <h2>きっかけ</h2>
+            <p>学習した内容を使って何か作りたかった</p>
+            <div class="titlelogo"><img src="creationicon/title8.png"></div>
+            <p>乱数で決められた3桁の数字を当てるゲーム(桁指定はコードの書き換えで行う)<br>※同じ数字は使わない<br><br>回答後に表示される「EAT」「BITE」で正解のヒントを得られる。<br>※BITE 数字のみ同じ<br>※EAT 位置も数字も同じ<br>正解時は手数を表示される。<br><br>答え、回答の数字は共に一桁ずつ配列に入れられ、<br>お互いの配列の要素番号、入れられた数字をもとに正解を判別する。<br><br>[機能]<br>3桁以上の数を回答、2回以上同じ数字を使って回答<br>→間違いを知らせて再入力を求める。</p>
+            <div class="titlelogo"><img src="creationicon/title7.png"></div>
+            <img src="img/numeron.png" width="80%">
+            <p>エラー</p>
+            <img src="img/numeron2.png" width="80%">
         </div>
     </body>
 </html>
