@@ -20,7 +20,7 @@ html{
     color: #ffffff;
     padding: 30px 0 30px 0;
     background-image: url(profileicon/bgi.png);
-    background-size: contain;
+    background-size: cover;
     background-color:rgba(115, 115, 115,0.9);
     background-blend-mode:darken;
 }
